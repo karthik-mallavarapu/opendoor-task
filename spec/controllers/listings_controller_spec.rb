@@ -85,4 +85,18 @@ describe ListingsController, type: :controller do
       expect(listings.count).to eq 5
     end
   end
+
+  context "paginates" do
+    before {
+      get :index
+      @headers = response.headers
+    }
+    it "with header field total" do
+      expect(@headers.include?("Total")).to eq true
+    end
+
+    it "with header field per-page" do
+      expect(@headers.include?("Per-Page")).to eq true
+    end
+  end
 end
