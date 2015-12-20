@@ -17,8 +17,9 @@ The api returns a filtered set of listings.
 # Installation
 
     bundle install # Installs gems from the Gemfile.
-    bundle exec rake db:setup # creates database, loads schema and seeds the database.
-    bundle exec rails s # runs the server on localhost.
+    bundle exec rake db:setup # Creates database, loads schema and seeds the database.
+    bundle exec rails s # Runs the server on localhost.
+    bundle exec rake spec # Runs rspec model and controller specs
 
 # Further improvements
 * Given a location, filter results within the vicinity of the location (within 5 miles, 10 miles etc).
